@@ -1,0 +1,32 @@
+/* maps */
+
+$sizes:(
+    xs: 1.2em,
+    sm: 1.4em,
+    md: 1.6em,
+    xl: 1.8em,
+    xxl: 2em,
+    xxxl: 2.2em
+);
+
+@each $var, $val in $sizes {
+    .size-#{$var} {
+      font-size:#{$val};
+    }
+}
+
+$weights:(
+    xs: 200,
+    sm: 400,
+    md: 500,
+    xl: 600,
+    xxl: 700,
+    xxxl: 900
+);
+
+@each $var, $val in $weights {
+    .weight-#{$var} {
+      font-weight:#{$val};
+    }
+}
+
