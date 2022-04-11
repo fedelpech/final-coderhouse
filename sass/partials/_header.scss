@@ -1,102 +1,54 @@
 /* header */
 
 header {
+    @include flex(column, null, center, null, null);
     grid-column: 1 / 4;
-    min-height: auto;
-    .top-bar {
-        @include flex(row, center, null, null, null);
-        width: 100%;
-        min-height: auto;
-        background-color: $grey;
-        border-bottom: 1px solid $darkGrey;
-        &-wrapper {
-            @include flex(row, flex-end, center, 45px, null);
-            position: relative;
-            z-index: 2;
-            width: 82%;
-            min-height: 5vh;
-            background-color: $grey;
-            &-search {
-                &-sliderdown {
-                    @include flex(row, null, center, null, null);
-                    padding: 10px 15px;
-                    cursor: pointer;
-                    &:hover .top-bar-wrapper-search-sliderdown-container {
-                        display: flex;
-                    }
-                    &:hover svg {
-                        color: $darkGray;
-                    }
-                    svg {
-                        color: $gray;
-                        transition: 0.2s ease-in-out;
-                    }
-                    &-container {
-                        @include flex(row, center, center, null, null);
-                        @include btn(55px, 235px, null, 2px, $white);
-                        display: none;
-                        position: absolute;
-                        z-index: 1;
-                        margin: 95px 0 0 -200px;
-                        transition: 0.1s ease-in-out;
-                        box-shadow: 1px 1px 10px $shadow;
-                        form input {
-                            @include btn(33px, 210px, 1px solid $darkGrey, 50px, null);
-                            padding: 0 15px;
-                            font-size: map-get($sizes, xs);
-                            color: $gray;
-                            &:focus {
-                                outline: none;
-                            }
-                        }
-                    }
-                }   
-            
-            } 
-            &-social {
-                @include flex(row, null, center, 15px, null);
-                a {
-                    @include flex(row, null, center, null, null);
-                    #twitter-icon {
-                        color: $gray;
-                        transition: 0.2s ease-in-out;
-                        &:hover {
-                            color: $lightBlue;
-                        }
-                    }
-                    #youtube-icon {
-                        color: $gray;
-                        transition: 0.2s ease-in-out;
-                        &:hover {
-                            color: $red;
-                        }
-                    }
-                }
-            } 
-        }
-    }
     .nav-bar {
-        @include flex(column, null, center, null, null);
-        width: 100%;
-        picture {
-            padding: 25px 0 20px 0;
+        @include flex(row, space-between, center, null, wrap);
+        width: 86%;
+        height: 70px;
+        border-bottom: 1px solid $dark-gray;
+        picture img {
+            height: 52px;
         }
         &-list {
-            @include flex(row, center, center, 10px, wrap);
-            .active::after {
-                content: "";
-                position: absolute;
-                margin: 30px 0 0 0;
-                width: 20px;
-                height: 2px;
-                background-color: $blue;
+            @include flex(row, null, center, 4em, null);
+            li a {
+                padding: 28px 0;
+                font-size: map-get($sizes, xs);
+                color: $white;
+                transition: 0.2s ease-in-out;
+                &:hover {
+                    color: $green;
+                }
             }
+        }
+        &-additional {
+            @include flex(row, null, center, 1.8rem, null);
             a {
-                @include flex(row, center, center, 3px, null);
-                padding: 8px 20px;
-                font-size: map-get($sizes, sm);
-                font-weight: map-get($weights, md);
+                padding: 24px 0;
+                font-size: map-get($sizes, xs);
+                color: $white;
+                transition: 0.2s ease-in-out;
+                &:hover {
+                    color: $dark-gray;
+                }
+                &:hover svg {
+                    color: $dark-gray;
+                }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-bar-list {
+        justify-content: center;
+        width: 100%;
+        order: 3;
+        border-bottom: 1px solid $dark-gray;
+        .hidden {
+            display: none;
         }
     }
 }
