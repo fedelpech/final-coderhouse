@@ -22,7 +22,7 @@ body {
     grid-template-columns: 7% 86% 7%;
     min-height: 100vh;
     width: 100%;
-    background-color: $blackBg;
+    background-color: $white;
 }
 
 ul {
@@ -32,15 +32,12 @@ ul {
 a {
     text-decoration: none;
     display: inline-block;
-    color: $white;
+    color: $principalBlack;
 }
 
 svg {
-    color: $white;
+    color: $secondaryBlack;
     transition: 0.2s ease-in-out;
-    &:hover {
-        color: $dark-gray;
-    }
 }
 
 input {

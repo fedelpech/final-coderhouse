@@ -1,54 +1,88 @@
 /* header */
 
 header {
-    @include flex(column, null, center, null, null);
+    @include flex(row, center, null, null, null);
     grid-column: 1 / 4;
+    height: fit-content;
+    border-bottom: 1px solid $gray;
     .nav-bar {
-        @include flex(row, space-between, center, null, wrap);
+        @include flex(row, space-between, center, null, null);
         width: 86%;
-        height: 70px;
-        border-bottom: 1px solid $dark-gray;
+        height: 86px;
         picture img {
-            height: 52px;
+            height: 64px;
         }
-        &-list {
-            @include flex(row, null, center, 4em, null);
-            li a {
-                padding: 28px 0;
-                font-size: map-get($sizes, xs);
-                color: $white;
-                transition: 0.2s ease-in-out;
-                &:hover {
-                    color: $green;
+        &__list {
+            @include flex(row, null, center, 1.6rem, null);
+            &-item {
+                height: fit-content;
+                &:hover .uni {
+                    display: block;
+                }
+                &:hover .careers {
+                    display: block;
+                }
+                &__link {
+                    padding: 9px 12px;
+                    font-size: map-get($sizes, sm);
+                    font-weight: map-get($weights, sm);
+                    border-radius: 4px;
+                    transition: 0.2s ease-in-out;
+                    &:hover {
+                        background-color: $gray;
+                    }
+                }
+                .sub-menu {
+                    position: absolute;
+                    display: none;
+                    margin: 10px 0 0 0;
+                    height: fit-content;
+                    background-color: $white;
+                    border: 1px solid $gray;
+                    border-radius: 4px;
+                    &::before {
+                        position: absolute;
+                        content:"";
+                        height: 10px;
+                        width: 102px;
+                        top: -11px;
+                    }
+                    &__item {
+                        height: fit-content;
+                        &-link {
+                            @include flex(row, null, center, 1rem, null);
+                            margin: 8px;
+                            padding: 16px 18px;
+                            font-size: map-get($sizes, sm);
+                            font-weight: map-get($weights, sm);
+                            border-radius: 4px;
+                            transition: 0.2s ease-in-out;
+                            &:hover {
+                                background-color: $gray;
+                            }
+                            svg {
+                                color: $blue;
+                            }
+                        }
+                    }
                 }
             }
         }
-        &-additional {
-            @include flex(row, null, center, 1.8rem, null);
+        &__login {
+            @include flex(row, null, center, null, null);
             a {
-                padding: 24px 0;
+                padding: 7px 16px;
                 font-size: map-get($sizes, xs);
+                font-weight: map-get($weights, sm);
+                border-radius: 50px;
                 color: $white;
+                background-color: $blue;
                 transition: 0.2s ease-in-out;
                 &:hover {
-                    color: $dark-gray;
-                }
-                &:hover svg {
-                    color: $dark-gray;
+                    background-color: $secondaryBlack;
                 }
             }
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .nav-bar-list {
-        justify-content: center;
-        width: 100%;
-        order: 3;
-        border-bottom: 1px solid $dark-gray;
-        .hidden {
-            display: none;
+            
         }
     }
 }
