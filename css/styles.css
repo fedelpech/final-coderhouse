@@ -12,13 +12,11 @@
 
 html {
   font-size: 62.5%;
-  font-family: "Inter", sans-serif;
-  min-height: 100vh; }
+  font-family: "Inter", sans-serif; }
 
 body {
   display: grid;
   grid-template-columns: 7% 86% 7%;
-  min-height: 100vh;
   width: 100%;
   background-color: #ffffff; }
 
@@ -77,58 +75,61 @@ input {
 
 /* partials */
 /* header */
-header {
+/* here starts the header for desktop */
+header, .header-responsive {
   display: flex;
   flex-direction: row;
   justify-content: center;
   grid-column: 1 / 4;
-  height: fit-content;
+  height: auto;
   border-bottom: 1px solid #f7f7f7; }
-  header .nav-bar {
+  header .nav-bar, .header-responsive .nav-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 86%;
     height: 86px; }
-    header .nav-bar picture img {
+    header .nav-bar picture img, .header-responsive .nav-bar picture img {
       height: 64px; }
-    header .nav-bar__list {
+    header .nav-bar__list, .header-responsive .nav-bar__list {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       align-items: center;
-      gap: 1.6rem; }
-      header .nav-bar__list-item {
-        height: fit-content; }
-        header .nav-bar__list-item:hover .uni {
+      gap: 1.6rem;
+      margin: 7px 0; }
+      header .nav-bar__list-item, .header-responsive .nav-bar__list-item {
+        height: auto; }
+        header .nav-bar__list-item:hover .uni, .header-responsive .nav-bar__list-item:hover .uni {
           display: block; }
-        header .nav-bar__list-item:hover .careers {
+        header .nav-bar__list-item:hover .careers, .header-responsive .nav-bar__list-item:hover .careers {
           display: block; }
-        header .nav-bar__list-item__link {
+        header .nav-bar__list-item__link, .header-responsive .nav-bar__list-item__link, .header-responsive .nav-bar__responsive-list__item {
           padding: 9px 12px;
           font-size: 1.4em;
           font-weight: 400;
           border-radius: 4px;
           transition: 0.2s ease-in-out; }
-          header .nav-bar__list-item__link:hover {
+          header .nav-bar__list-item__link:hover, .header-responsive .nav-bar__list-item__link:hover, .header-responsive .nav-bar__responsive-list__item:hover {
             background-color: #f7f7f7; }
-        header .nav-bar__list-item .sub-menu {
+        header .nav-bar__list-item .sub-menu, .header-responsive .nav-bar__list-item .sub-menu {
           position: absolute;
           display: none;
           margin: 10px 0 0 0;
-          height: fit-content;
+          height: auto;
           background-color: #ffffff;
           border: 1px solid #f7f7f7;
           border-radius: 4px; }
-          header .nav-bar__list-item .sub-menu::before {
+          header .nav-bar__list-item .sub-menu::before, .header-responsive .nav-bar__list-item .sub-menu::before {
             position: absolute;
             content: "";
             height: 10px;
             width: 102px;
             top: -11px; }
-          header .nav-bar__list-item .sub-menu__item {
-            height: fit-content; }
-            header .nav-bar__list-item .sub-menu__item-link {
+          header .nav-bar__list-item .sub-menu__item, .header-responsive .nav-bar__list-item .sub-menu__item {
+            height: auto; }
+            header .nav-bar__list-item .sub-menu__item-link, .header-responsive .nav-bar__list-item .sub-menu__item-link {
               display: flex;
               flex-direction: row;
               align-items: center;
@@ -139,15 +140,15 @@ header {
               font-weight: 400;
               border-radius: 4px;
               transition: 0.2s ease-in-out; }
-              header .nav-bar__list-item .sub-menu__item-link:hover {
+              header .nav-bar__list-item .sub-menu__item-link:hover, .header-responsive .nav-bar__list-item .sub-menu__item-link:hover {
                 background-color: #f7f7f7; }
-              header .nav-bar__list-item .sub-menu__item-link svg {
+              header .nav-bar__list-item .sub-menu__item-link svg, .header-responsive .nav-bar__list-item .sub-menu__item-link svg {
                 color: #0056FF; }
-    header .nav-bar__login {
+    header .nav-bar__login, .header-responsive .nav-bar__login {
       display: flex;
       flex-direction: row;
       align-items: center; }
-      header .nav-bar__login a {
+      header .nav-bar__login a, .header-responsive .nav-bar__login a {
         padding: 7px 16px;
         font-size: 1.2em;
         font-weight: 400;
@@ -155,7 +156,36 @@ header {
         color: #ffffff;
         background-color: #0056FF;
         transition: 0.2s ease-in-out; }
-        header .nav-bar__login a:hover {
+        header .nav-bar__login a:hover, .header-responsive .nav-bar__login a:hover {
           background-color: #151515; }
+
+/* here ends the header for desktop */
+/* here starts the responsive header */
+.header-responsive {
+  display: none; }
+  .header-responsive .nav-bar__responsive {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 86%;
+    height: auto; }
+    .header-responsive .nav-bar__responsive-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin: 5px 0; }
+
+/* here ends the responsive header */
+/* media queries */
+@media (max-width: 992px) {
+  .nav-bar__list {
+    display: none !important;
+    background: red; }
+  .header-responsive {
+    display: flex; } }
 
 /* views */

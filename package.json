@@ -1,7 +1,6 @@
 {
   "name": "final-coderhouse",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,5 +13,14 @@
   "dependencies": {
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipedelpech/final-coderhouse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/felipedelpech/final-coderhouse/issues"
+  },
+  "homepage": "https://github.com/felipedelpech/final-coderhouse#readme",
+  "description": ""
 }
