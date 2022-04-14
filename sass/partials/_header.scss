@@ -72,7 +72,7 @@ header {
             }
         }
         &__login {
-            @include flex(row, null, center, null, null);
+            @include flex(row, center, center, null, null);
             a {
                 padding: 7px 16px;
                 font-size: map-get($sizes, xs);
@@ -106,6 +106,7 @@ header {
             margin: 5px 0;
             &__item {
                 @extend .nav-bar__list-item__link;
+                font-size: map-get($sizes, xs);
             }
         }
     }
@@ -122,5 +123,8 @@ header {
     }
     .header-responsive {
         display: flex;
+    }
+    .nav-bar picture img {
+        height: 60px;
     }
 }

@@ -147,6 +147,7 @@ header, .header-responsive {
     header .nav-bar__login, .header-responsive .nav-bar__login {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       align-items: center; }
       header .nav-bar__login a, .header-responsive .nav-bar__login a {
         padding: 7px 16px;
@@ -178,6 +179,8 @@ header, .header-responsive {
       gap: 1.2rem;
       flex-wrap: wrap;
       margin: 5px 0; }
+      .header-responsive .nav-bar__responsive-list__item {
+        font-size: 1.2em; }
 
 /* here ends the responsive header */
 /* media queries */
@@ -186,6 +189,8 @@ header, .header-responsive {
     display: none !important;
     background: red; }
   .header-responsive {
-    display: flex; } }
+    display: flex; }
+  .nav-bar picture img {
+    height: 60px; } }
 
 /* views */
