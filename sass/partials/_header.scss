@@ -6,11 +6,13 @@ header {
     @include flex(row, center, null, null, null);
     grid-column: 1 / 4;
     height: auto;
+    background-color: $white;
     border-bottom: 1px solid $gray;
     .nav-bar {
         @include flex(row, space-between, center, null, null);
         width: 86%;
         height: 86px;
+        background-color: $white;
         picture img {
             height: 64px;
         }
@@ -101,12 +103,12 @@ header {
         @include flex(row, center, center, null, null);
         width: 86%;
         height: auto;
+        background-color: $white;
         &-list {
             @include flex(row, center, center, 1.2rem, wrap);
             margin: 5px 0;
             &__item {
                 @extend .nav-bar__list-item__link;
-                font-size: map-get($sizes, xs);
             }
         }
     }
@@ -125,6 +127,12 @@ header {
         display: flex;
     }
     .nav-bar picture img {
-        height: 60px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-bar__responsive-list__item {
+        font-size: map-get($sizes, xs);
     }
 }
