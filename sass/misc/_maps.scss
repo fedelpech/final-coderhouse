@@ -7,7 +7,11 @@ $sizes:(
     xl: 1.8em,
     xxl: 2em,
     xxxl: 2.2em,
-    h1: 6.4em
+    h1: 6.8em,
+    h1-rp: 5em,
+    h1-rp2: 3.4em,
+    h1-rp3: 3em,
+    h2: 5.2em
 );
 
 @each $var, $val in $sizes {
