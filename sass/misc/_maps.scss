@@ -6,7 +6,8 @@ $sizes:(
     md: 1.6em,
     xl: 1.8em,
     xxl: 2em,
-    xxxl: 2.2em
+    xxxl: 2.2em,
+    h1: 6.4em
 );
 
 @each $var, $val in $sizes {
