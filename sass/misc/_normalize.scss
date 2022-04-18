@@ -14,6 +14,7 @@
 html {
     font-size: 62.5%;
     font-family: $principalFont;
+    overflow-x: hidden;
 }
 
 body {
@@ -21,6 +22,8 @@ body {
     grid-template-columns: 7% 86% 7%;
     width: 100%;
     background-color: $lightBlue;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 ul {

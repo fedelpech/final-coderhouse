@@ -7,7 +7,7 @@ header {
     grid-column: 1 / 4;
     height: auto;
     background-color: $white;
-    border-bottom: 1px solid $gray;
+    border-bottom: 1px solid $grayB;
     .nav-bar {
         @include flex(row, space-between, center, null, null);
         width: 86%;

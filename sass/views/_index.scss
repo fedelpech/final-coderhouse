@@ -10,6 +10,7 @@
     &-container {
         @include flex(column, null, null, null, null);
         width: 86%;
+        height: auto;
         &__top {
             height: auto;
             width: 100%;
@@ -119,19 +120,137 @@
 
 /* finish */
 
-.news {
+.numbers {
     @extend .presentation;
-    margin: 80px 0 0 0;
+    margin: 100px 0;
     height: auto;
     &-container {
-        @include flex(row, null, null, null, wrap);
+        @include flex(row, space-between, center, null, null);
         width: 86%;
         height: auto;
-        h2 {
-            font-size: map-get($sizes, h2);
-            font-weight: map-get($weights, md);
-            font-family: $secondaryFont;
-            color: $secondaryBlack;
+        &__block {
+            @include flex(column, null, null, null, null);
+            width: 310px;
+            height: auto;
+            &-top {
+                padding: 0 0 20px 0;
+                font-size: map-get($sizes, h1-rp);
+                font-weight: map-get($weights, xl);
+                color: $blue;
+            }
+            &-center {
+                font-size: map-get($sizes, xxl);
+                font-weight: map-get($weights, sm);
+                color: $secondaryBlack;
+            }
+            &-bottom {
+                padding: 15px 0 0 0;
+                font-size: map-get($sizes, md);
+                font-weight: map-get($weights, sm);
+                color: $secondaryBlack;
+            }
         }
     }
 }
+
+/* article 2 media queries */
+
+@media (max-width: 992px) {
+    .numbers {
+        margin: 30px 0 0 0;
+        &-container {
+        flex-direction: column;
+        justify-content: null;
+        align-items: start;
+        &__block {
+            margin: 0 0 20px 0;
+            &-top {
+                font-size: map-get($sizes, h1-rp);
+                padding: 40px 0 0 0;
+            }
+            &-center {
+                font-size: map-get($sizes, xl);
+                padding: 15px 0 0 0;
+            }
+            &-bottom {
+                padding: 15px 0;
+            }
+        }
+    }
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .numbers-container__block {
+        margin: 0 0 5px 0;
+    }
+    .numbers-container__block-top {
+        font-size: map-get($sizes, h1-rp2);
+    }
+    .numbers-container__block-center {
+        font-size: map-get($sizes, md);
+    }
+    .numbers-container__block-bottom {
+        font-size: map-get($sizes, sm);
+    }
+}
+
+/* finish */
+
+.join {
+    @extend .numbers;
+    margin: 30px 0 0 0;
+    &-container {
+        width: 86%;
+        height: auto;
+        a {
+            @include flex(row, space-between, center, 2rem, null);
+            transition: 0.2s ease-in-out;
+            &:hover svg {
+                transform: rotate(0deg);
+            }
+            &:hover span {
+                text-decoration: underline;
+                text-decoration-color: $blue;
+            }
+            h2 {
+                font-size: map-get($sizes, h1-rp);
+                color: $secondaryBlack;
+                span {
+                    transition: 0.2s ease-in-out;
+                }
+            }
+            svg {
+                margin: 5px 0 0 0;
+                color: $blue;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+/* article 3 media queries */
+
+@media (max-width: 1220px) {
+    .join-container a h2 {
+        font-size: map-get($sizes, h1-rp2);
+    }
+}
+
+@media (max-width: 867px) {
+    .join-container a h2 {
+        font-size: map-get($sizes, h1-rp3);
+    }
+}
+
+@media (max-width: 780px) {
+    .join-container a h2 {
+        font-size: map-get($sizes, xxxl);
+    }
+    .join-container a svg {
+        height: 60px;
+    }
+}
+
+/* finish */

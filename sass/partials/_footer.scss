@@ -1,0 +1,39 @@
+/* footer */
+
+footer {
+    @include flex(row, center, null, null, null);
+    grid-column: 1 / 4;
+    margin: 70px 0 0 0;
+    height: auto;
+    background-color: $white;
+    border-top: 1px solid $grayB;
+    .footer-container {
+        @include flex(row, space-between, null, null, null);  
+        width: 86%;
+        height: auto;
+        &__info {
+            @include flex(column, null, null, null, null);
+            padding: 15px 0;
+            height: auto;
+            width: 170px;
+            picture img {
+                height: 50px;
+            }
+            p {
+                padding: 5px 0 0 0;
+                font-weight: map-get($weights, md);
+            }
+        }
+        &__social {
+            @include flex(row, null, null, 1.2rem, null);
+            padding: 20px 0;
+            svg {
+                color: $secondaryBlack;
+                transition: 0.2s ease-in-out;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
