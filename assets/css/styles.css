@@ -472,8 +472,9 @@ footer {
     height: 60px; } }
 
 /* finish */
-body {
-  max-height: 100vh; }
+.u {
+  position: relative;
+  min-height: 100vh; }
 
 /* universidad */
 .breadcrumb, .university {
@@ -525,7 +526,3 @@ body {
       color: #0056ff; }
 
 /* finish */
-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0; }

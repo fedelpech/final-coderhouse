@@ -1,7 +1,7 @@
-body {
-    max-height: 100vh;
+.u {
+    position: relative;
+    min-height: 100vh;
 }
-
 /* universidad */
 
 .breadcrumb {
@@ -57,11 +57,3 @@ body {
 }
 
 /* finish */
-
-footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
-
