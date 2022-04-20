@@ -1,0 +1,67 @@
+body {
+    max-height: 100vh;
+}
+
+/* universidad */
+
+.breadcrumb {
+    @include flex(row, center, null, null, null);
+    grid-column: 1 / 4;
+    height: auto;
+    &__content {
+        @include flex(row, null, center, 0.2rem, null);
+        margin: 20px 0 0 0;
+        width: 86%;
+        height: auto;
+        p, a {
+            font-size: map-get($sizes, xs);
+        }
+        p {
+            color: $darkGray;
+        }
+        a {
+            color: $secondaryBlack;
+        }
+    }
+}
+
+.university {
+    @extend .breadcrumb;
+    &__content {
+        @include flex(column, null, null, null, null);
+        margin: 40px 0 0 0;
+        width: 86%;
+        height: auto;
+        h1 {
+            margin: 0 0 20px;
+            font-size: map-get($sizes, h1-rp);
+            color: $blue;
+        }
+        &__section {
+            @include flex(row, null, center, 1rem, null);
+            width: 170px;
+            margin: 0 0 10px 0;
+            padding: 10px 12px;
+            font-size: map-get($sizes, sm);
+            font-weight: map-get($weights, sm);
+            border-radius: 4px;
+            transition: 0.2s ease-in-out;
+            &:hover {
+                background-color: $darkGrayB;
+            }
+            svg {
+                color: $blue;
+            }
+        }
+    }
+}
+
+/* finish */
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+

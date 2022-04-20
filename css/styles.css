@@ -30,7 +30,7 @@ ul {
 a {
   text-decoration: none;
   display: inline-block;
-  color: #151515; }
+  color: #000000; }
 
 svg {
   color: #151515;
@@ -472,60 +472,16 @@ footer {
     height: 60px; } }
 
 /* finish */
-body {
-  max-height: 100vh; }
-
 /* universidad */
-.breadcrumb, .university {
+.breadcrumb {
   display: flex;
   flex-direction: row;
   justify-content: center;
   grid-column: 1 / 4;
+  width: 100%;
   height: auto; }
   .breadcrumb__content {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 0.2rem;
-    margin: 20px 0 0 0;
     width: 86%;
     height: auto; }
-    .breadcrumb__content p, .breadcrumb__content a {
-      font-size: 1.2em; }
-    .breadcrumb__content p {
-      color: #b9b9b9; }
-    .breadcrumb__content a {
-      color: #151515; }
-
-.university__content {
-  display: flex;
-  flex-direction: column;
-  margin: 40px 0 0 0;
-  width: 86%;
-  height: auto; }
-  .university__content h1 {
-    margin: 0 0 20px;
-    font-size: 5em;
-    color: #0056ff; }
-  .university__content__section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    width: 170px;
-    margin: 0 0 10px 0;
-    padding: 10px 12px;
-    font-size: 1.4em;
-    font-weight: 400;
-    border-radius: 4px;
-    transition: 0.2s ease-in-out; }
-    .university__content__section:hover {
-      background-color: #f0f0f0; }
-    .university__content__section svg {
-      color: #0056ff; }
-
-/* finish */
-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0; }
