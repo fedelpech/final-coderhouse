@@ -14,6 +14,7 @@
         }
         p {
             color: $darkGray;
+            cursor: no-drop;
         }
         a {
             color: $secondaryBlack;
@@ -31,6 +32,7 @@
         h1 {
             margin: 0 0 20px;
             font-size: map-get($sizes, h1-rp);
+            font-family: $secondaryFont;
             color: $blue;
         }
         &__section {
@@ -56,7 +58,7 @@
 
 /* media queries */
 
-@media (max-width: 992px) {
+@media (max-width: 576px) {
     .university .university__content h1 {
         font-size: map-get($sizes, h1-rp2);
     }

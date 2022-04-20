@@ -1,0 +1,101 @@
+/* somos */
+
+.we-are {
+    @include flex(row, center, null, null, null);
+    grid-column: 1 / 4;
+    height: auto;
+    &__content {
+        @include flex(column, null, null, null, null);
+        margin: 40px 0 0 0;
+        width: 86%;
+        height: auto;
+        h1 {
+            font-size: map-get($sizes, h1-rp);
+            font-family: $secondaryFont;
+            color: $blue;
+        }
+        &__president {
+            @include flex(column, null, null, null, null);
+            margin: 40px 0 0 0;
+            &__profile {
+                @include flex(row, null, center, 1rem, null);
+                &::after {
+                    position: absolute;
+                    content: '';
+                    height: 16px;
+                    width: 16px;
+                    margin: 44px 0 0 44px;
+                    border-radius: 50px;
+                    background-color: $green;
+                }
+                img {
+                    height: 60px;
+                    border-radius: 100px;
+                    box-shadow: 1px 1px 5px $shadow;
+                }    
+                &__name {
+                    @include flex(column, null, null, 0.5rem, null);
+                    #name {
+                        font-size: map-get($sizes, md);
+                        font-weight: map-get($weights, md);
+                        color: $secondaryBlack;
+                    }
+                    p {
+                        font-size: map-get($sizes, sm);
+                        color: $darkGray;
+                    }
+                    
+                }
+            }
+        }
+        &__read {
+            @include flex(column, null, null, null, null);
+            margin: 25px 0;
+            width: 50%;
+            height: auto;
+            p {
+                margin: 0 0 15px 0;
+                font-size: map-get($sizes, md);
+                color: $secondaryBlack;
+            }
+        }
+        &__share {
+            @include flex(row, null, center, 1rem, null);
+            p {
+                font-size: map-get($sizes, sm);
+            }
+            svg {
+                color: $blue;
+                transition: 0.2s ease-in-out;
+                &:hover {
+                    color: $secondaryBlack;
+                }
+            }
+        }
+    }
+}
+
+/* finish */
+
+/* media queries */
+
+@media (max-width: 992px) {
+    .we-are__content__read {
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .we-are__content {
+        h1 {
+            font-size: map-get($sizes, h1-rp2);
+        }
+        &__read {
+            width: 100%;
+            p {
+                font-size: map-get($sizes, sm);
+            }
+        }
+        
+    }
+}
