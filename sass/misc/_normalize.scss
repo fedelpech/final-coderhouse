@@ -24,6 +24,7 @@ body {
     background-color: $lightBlue;
     overflow-x: hidden;
     overflow-y: hidden;
+    text-rendering: optimizeLegibility;
 }
 
 ul {

@@ -8,20 +8,26 @@ footer {
     background-color: $white;
     border-top: 1px solid $grayB;
     .footer-container {
-        @include flex(row, space-between, null, null, null);  
+        @include flex(row, space-between, center, null, null);  
         width: 86%;
         height: auto;
         &__info {
-            @include flex(column, null, null, null, null);
-            padding: 15px 0;
+            @include flex(row, null, center, 1.2rem, null);
+            padding: 10px 0;
             height: auto;
-            width: 170px;
+            width: auto;
             picture img {
                 height: 50px;
             }
             p {
                 padding: 5px 0 0 0;
                 font-weight: map-get($weights, md);
+            }
+            a {
+                transition: 0.2s ease-in-out;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
         &__social {
@@ -35,5 +41,16 @@ footer {
                 }
             }
         }
+    }
+}
+
+/* media queries */
+
+@media (max-width: 992px) {
+    .footer-container .footer-container__info {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.2rem;
+        width: 200px;
     }
 }

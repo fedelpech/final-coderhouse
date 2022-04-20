@@ -209,6 +209,7 @@
             transition: 0.2s ease-in-out;
             &:hover svg {
                 transform: rotate(0deg);
+                color: $secondaryBlack;
             }
             &:hover span {
                 text-decoration: underline;
@@ -217,9 +218,6 @@
             h2 {
                 font-size: map-get($sizes, h1-rp);
                 color: $secondaryBlack;
-                span {
-                    transition: 0.2s ease-in-out;
-                }
             }
             svg {
                 margin: 5px 0 0 0;
