@@ -1,7 +1,3 @@
-.u {
-    position: relative;
-    min-height: 100vh;
-}
 /* universidad */
 
 .breadcrumb {
@@ -10,7 +6,7 @@
     height: auto;
     &__content {
         @include flex(row, null, center, 0.2rem, null);
-        margin: 20px 0 0 0;
+        margin: 20px 0 0px 0;
         width: 86%;
         height: auto;
         p, a {
@@ -31,7 +27,7 @@
         @include flex(column, null, null, null, null);
         margin: 40px 0 0 0;
         width: 86%;
-        height: auto;
+        min-height: 53vh;
         h1 {
             margin: 0 0 20px;
             font-size: map-get($sizes, h1-rp);

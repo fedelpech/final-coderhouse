@@ -472,10 +472,6 @@ footer {
     height: 60px; } }
 
 /* finish */
-.u {
-  position: relative;
-  min-height: 100vh; }
-
 /* universidad */
 .breadcrumb, .university {
   display: flex;
@@ -488,7 +484,7 @@ footer {
     flex-direction: row;
     align-items: center;
     gap: 0.2rem;
-    margin: 20px 0 0 0;
+    margin: 20px 0 0px 0;
     width: 86%;
     height: auto; }
     .breadcrumb__content p, .breadcrumb__content a {
@@ -503,7 +499,7 @@ footer {
   flex-direction: column;
   margin: 40px 0 0 0;
   width: 86%;
-  height: auto; }
+  min-height: 53vh; }
   .university__content h1 {
     margin: 0 0 20px;
     font-size: 5em;
@@ -521,7 +517,7 @@ footer {
     border-radius: 4px;
     transition: 0.2s ease-in-out; }
     .university__content__section:hover {
-      background-color: #f0f0f0; }
+      background-color: #eeeeee; }
     .university__content__section svg {
       color: #0056ff; }
 
