@@ -53,3 +53,11 @@
 }
 
 /* finish */
+
+/* media queries */
+
+@media (max-width: 992px) {
+    .university .university__content h1 {
+        font-size: map-get($sizes, h1-rp2);
+    }
+}
