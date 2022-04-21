@@ -1,0 +1,80 @@
+/* historia */
+
+.history {
+    @include flex(row, center, null, null, null);
+    margin: 40px 0 0 0;
+    grid-column: 1 / 4;
+    height: auto;
+    &__content {
+        @include flex(column, null, null, null, null);
+        width: 86%;
+        height: auto;
+        &::before {
+            content: "";
+            position: absolute;
+            margin: 100px 0 0 20px;
+            height: 2440px;
+            width: 2px;
+            background-color: $blue;
+        }
+        h1 {
+            margin: 0 0 25px 0;
+            font-size: map-get($sizes, h1-rp);
+            font-family: $secondaryFont;
+            color: $blue;
+        }
+        &__wrapper {
+            @include flex(row, null, null, 1.5rem, null);
+            margin: 0 0 25px 0;
+            width: 100%;
+            height: auto;
+            &__year {
+                position: relative;
+                z-index: 1;
+                p {
+                    padding: 3px;
+                    font-size: map-get($sizes, md);
+                    font-weight: map-get($weights, md);
+                    color: $secondaryBlack;
+                    background-color: $lightBlue;
+                }
+            }
+            &__desc {
+                margin: 1px 0 0 0;
+                width: 50%;
+                p {
+                    margin: 0 0 10px 0;
+                    font-size: map-get($sizes, sm);
+                }
+            }
+        }
+        &__share {
+            @extend .we-are__content__share;
+        }
+    }
+}
+
+/* finish */
+
+/* media queries */
+
+@media (max-width: 1280px) {
+    .history__content::before {
+        display: none;
+    }
+    .history__content__wrapper__year p {
+        color: $blue;
+    }
+}
+
+@media (max-width: 992px) {
+    .history__content__wrapper__desc {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .history__content h1 {
+        font-size: map-get($sizes, h1-rp2);
+    }
+}

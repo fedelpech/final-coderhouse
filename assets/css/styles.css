@@ -556,8 +556,10 @@ footer {
         align-items: center;
         gap: 1rem; }
         .we-are__content__president__profile img {
-          height: 60px;
-          border-radius: 100px;
+          height: 62px;
+          width: 62px;
+          object-fit: cover;
+          border-radius: 50px;
           box-shadow: 1px 1px 5px rgba(53, 53, 53, 0.3); }
         .we-are__content__president__profile__name {
           display: flex;
@@ -585,21 +587,21 @@ footer {
       height: auto; }
       .we-are__content__read p {
         margin: 0 0 15px 0;
-        font-size: 1.6em;
+        font-size: 1.4em;
         color: #151515; }
         .we-are__content__read p b {
           color: #646464; }
-    .we-are__content__share {
+    .we-are__content__share, .history__content__share {
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 1rem; }
-      .we-are__content__share p {
+      .we-are__content__share p, .history__content__share p {
         font-size: 1.4em; }
-      .we-are__content__share svg {
+      .we-are__content__share svg, .history__content__share svg {
         color: #0056ff;
         transition: 0.2s ease-in-out; }
-        .we-are__content__share svg:hover {
+        .we-are__content__share svg:hover, .history__content__share svg:hover {
           color: #151515; }
 
 /* finish */
@@ -615,3 +617,67 @@ footer {
     width: 100%; }
     .we-are__content__read p {
       font-size: 1.4em; } }
+
+/* historia */
+.history {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 40px 0 0 0;
+  grid-column: 1 / 4;
+  height: auto; }
+  .history__content {
+    display: flex;
+    flex-direction: column;
+    width: 86%;
+    height: auto; }
+    .history__content::before {
+      content: "";
+      position: absolute;
+      margin: 100px 0 0 20px;
+      height: 2440px;
+      width: 2px;
+      background-color: #0056ff; }
+    .history__content h1 {
+      margin: 0 0 25px 0;
+      font-size: 5em;
+      font-family: "Roboto", sans-serif;
+      color: #0056ff; }
+    .history__content__wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      margin: 0 0 25px 0;
+      width: 100%;
+      height: auto; }
+      .history__content__wrapper__year {
+        position: relative;
+        z-index: 1; }
+        .history__content__wrapper__year p {
+          padding: 3px;
+          font-size: 1.6em;
+          font-weight: 500;
+          color: #151515;
+          background-color: #f4f9fd; }
+      .history__content__wrapper__desc {
+        margin: 1px 0 0 0;
+        width: 50%; }
+        .history__content__wrapper__desc p {
+          margin: 0 0 10px 0;
+          font-size: 1.4em; }
+
+/* finish */
+/* media queries */
+@media (max-width: 1280px) {
+  .history__content::before {
+    display: none; }
+  .history__content__wrapper__year p {
+    color: #0056ff; } }
+
+@media (max-width: 992px) {
+  .history__content__wrapper__desc {
+    width: 100%; } }
+
+@media (max-width: 576px) {
+  .history__content h1 {
+    font-size: 3.4em; } }
