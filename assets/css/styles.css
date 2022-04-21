@@ -555,14 +555,6 @@ footer {
         flex-direction: row;
         align-items: center;
         gap: 1rem; }
-        .we-are__content__president__profile::after {
-          position: absolute;
-          content: '';
-          height: 16px;
-          width: 16px;
-          margin: 44px 0 0 44px;
-          border-radius: 50px;
-          background-color: #15971c; }
         .we-are__content__president__profile img {
           height: 60px;
           border-radius: 100px;
@@ -576,8 +568,15 @@ footer {
             font-weight: 500;
             color: #151515; }
           .we-are__content__president__profile__name p {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.5rem;
             font-size: 1.4em;
             color: #b9b9b9; }
+            .we-are__content__president__profile__name p svg {
+              margin: 1px 0 0 0;
+              color: #0056ff; }
     .we-are__content__read {
       display: flex;
       flex-direction: column;
@@ -588,6 +587,8 @@ footer {
         margin: 0 0 15px 0;
         font-size: 1.6em;
         color: #151515; }
+        .we-are__content__read p b {
+          color: #646464; }
     .we-are__content__share {
       display: flex;
       flex-direction: row;
