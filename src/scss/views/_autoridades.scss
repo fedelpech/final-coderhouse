@@ -1,0 +1,62 @@
+/* autoridades */
+
+.authorities {
+    @extend .history;
+    &__content {
+        @include flex(column, null, null, null, null);
+        width: 86%;
+        height: auto;
+        h1 {
+            font-size: map-get($sizes, h1-rp);
+            font-family: $secondaryFont;
+            color: $blue;
+        }
+        h2 {
+            margin: 30px 0 15px 0;;
+            font-size: map-get($sizes, xxxl);
+            color: $secondaryBlack;
+        }
+        &__committee {
+            @include flex(row, null, null, null, wrap);
+            width: auto;
+            height: auto;
+            border-left: 2px solid $blue;
+            background-color: $grayB;
+            &__profile {
+                @include flex(row, null, null, 1.5rem, null);
+                width: 352px;
+                height: auto;
+                margin: 15px;
+                img {
+                    height: 80px;
+                    width: 80px;
+                    border-radius: 50px;
+                }
+                &__name {
+                    @include flex(column, center, null, null, null);
+                    .name {
+                        font-size: map-get($sizes, md);
+                        color: $secondaryBlack;
+                    }
+                    p {
+                        font-size: map-get($sizes, sm);
+                        color: $darkGray;
+                    }
+                }
+            }        
+        }
+    }   
+}
+
+/* finish */
+
+/* media queries */
+
+@media (max-width: 576px) {
+    .authorities__content h2 {
+        font-size: map-get($sizes, xxl);
+    }
+    .authorities__content h1 {
+        font-size: map-get($sizes, h1-rp2);
+    }
+}

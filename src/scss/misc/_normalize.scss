@@ -45,3 +45,8 @@ svg {
 input {
     font-family: $principalFont;
 }
+
+::selection {
+    color: $white;
+    background-color: $blue;
+}

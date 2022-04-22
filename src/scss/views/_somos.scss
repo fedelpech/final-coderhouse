@@ -28,7 +28,7 @@
                 }    
                 &__name {
                     @include flex(column, null, null, 0.5rem, null);
-                    #name {
+                    .name {
                         font-size: map-get($sizes, md);
                         font-weight: map-get($weights, md);
                         color: $secondaryBlack;

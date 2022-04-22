@@ -39,6 +39,10 @@ svg {
 input {
   font-family: "Inter", sans-serif; }
 
+::selection {
+  color: #ffffff;
+  background-color: #0056ff; }
+
 /* mixins */
 /* maps */
 .size-xs {
@@ -565,7 +569,7 @@ footer {
           display: flex;
           flex-direction: column;
           gap: 0.5rem; }
-          .we-are__content__president__profile__name #name {
+          .we-are__content__president__profile__name .name {
             font-size: 1.6em;
             font-weight: 500;
             color: #151515; }
@@ -619,7 +623,7 @@ footer {
       font-size: 1.4em; } }
 
 /* historia */
-.history {
+.history, .authorities {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -680,4 +684,56 @@ footer {
 
 @media (max-width: 576px) {
   .history__content h1 {
+    font-size: 3.4em; } }
+
+/* autoridades */
+.authorities__content {
+  display: flex;
+  flex-direction: column;
+  width: 86%;
+  height: auto; }
+  .authorities__content h1 {
+    font-size: 5em;
+    font-family: "Roboto", sans-serif;
+    color: #0056ff; }
+  .authorities__content h2 {
+    margin: 30px 0 15px 0;
+    font-size: 2.2em;
+    color: #151515; }
+  .authorities__content__committee {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    border-left: 2px solid #0056ff;
+    background-color: #e8f5ff; }
+    .authorities__content__committee__profile {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      width: 352px;
+      height: auto;
+      margin: 15px; }
+      .authorities__content__committee__profile img {
+        height: 80px;
+        width: 80px;
+        border-radius: 50px; }
+      .authorities__content__committee__profile__name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .authorities__content__committee__profile__name .name {
+          font-size: 1.6em;
+          color: #151515; }
+        .authorities__content__committee__profile__name p {
+          font-size: 1.4em;
+          color: #b9b9b9; }
+
+/* finish */
+/* media queries */
+@media (max-width: 576px) {
+  .authorities__content h2 {
+    font-size: 2em; }
+  .authorities__content h1 {
     font-size: 3.4em; } }
