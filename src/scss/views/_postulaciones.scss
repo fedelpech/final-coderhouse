@@ -1,0 +1,93 @@
+/* postulaciones */
+
+.postulations {
+    @extend .authorities;
+    &__content {
+        @include flex(column, null, null, null, null);
+        width: 86%;
+        height: auto;
+        h1 {
+            font-size: map-get($sizes, h1-rp);
+            font-family: $secondaryFont;
+            color: $blue;
+        }
+        &__search {
+            @include flex(row, null, null, null, null);
+            @include btn(auto, 320px, 1px solid $darkGrayB, 50px, transparent);
+            margin: 30px 0 0 0;
+            span {
+                @include flex(row, center, center, null, null);
+                margin: 5px 8px;
+                svg {
+                    color: $blue;
+                }
+            }
+            form {
+                @include flex(row, null, center, null, null);
+                input {
+                    @include btn(null, 270px, none, null, transparent);
+                    outline: none;
+                    padding: 5px 0px 5px 0px;
+                    font-family: inherit;
+                    color: $secondaryBlack;
+                }
+            }
+        }
+        &__jobs {
+            @include flex(row, null, null, 20px, wrap);
+            margin: 35px 0 0 0;
+            width: 100%;
+            height: auto;
+            &__card {
+                @include flex(column, null, null, null, null);
+                width: 210px;
+                padding: 15px;
+                background-color: $grayB;
+                border-top: 2px solid $blue;
+                border-radius: 2px;
+                transition: 0.2s ease-in-out;
+                &:hover {
+                    box-shadow: 1px 1px 5px $shadow;
+                }
+                &__modality {
+                    @include flex(row, null, center, 0.5rem, null);
+                    font-size: map-get($sizes, xs);
+                }
+                h3 {
+                    margin: 15px 0 0 0;
+                    font-size: map-get($sizes, md);
+                    font-weight: map-get($weights, sm);
+                    color: $secondaryBlack;
+                }
+                &__bottom {
+                    @include flex(row, space-between, end, null, null);
+                    margin: 25px 0 0 0;
+                    p {
+                        margin: 0 0 1px 0;
+                        color: $darkGray;
+                    }
+                    a {
+                        @include btnA(5px 12px, map-get($sizes, xs), map-get($weights, sm), 50px, $white, $blue, 0.2s ease-in-out);
+                        &:hover {
+                            background-color: $secondaryBlack;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* media queries */
+
+@media (max-width: 576px) {
+    .postulations__content h1 {
+        font-size: map-get($sizes, h1-rp2);
+    }
+}
+
+@media (max-width: 512px) {
+    .postulations__content__jobs__card {
+        width: 100%;
+    }
+}

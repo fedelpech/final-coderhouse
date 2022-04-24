@@ -4,10 +4,4 @@
 
 La entrega trata de un re-diseño del sitio web oficial de la Universidad Austral.
 
-## Tecnologías utilizadas
-
-- HTML5
-- CSS3
-- SASS
-
-🥵 [Sitio web](https://austral.netlify.com/)
+[Sitio web](https://austral.netlify.com/)

@@ -345,7 +345,7 @@ footer {
         .presentation-container__bottom picture img {
           width: 100%;
           border-radius: 6px;
-          box-shadow: 1px 1px 10px rgba(53, 53, 53, 0.3); }
+          box-shadow: 1px 1px 10px rgba(53, 53, 53, 0.1); }
 
 /* article 1 media queries */
 @media (max-width: 992px) {
@@ -523,7 +523,7 @@ footer {
     border-radius: 4px;
     transition: 0.2s ease-in-out; }
     .university__content__section:hover {
-      background-color: #f3f3f3; }
+      background-color: #eeeeee; }
     .university__content__section svg {
       color: #0056ff; }
 
@@ -564,7 +564,7 @@ footer {
           width: 62px;
           object-fit: cover;
           border-radius: 50px;
-          box-shadow: 1px 1px 5px rgba(53, 53, 53, 0.3); }
+          box-shadow: 1px 1px 5px rgba(53, 53, 53, 0.1); }
         .we-are__content__president__profile__name {
           display: flex;
           flex-direction: column;
@@ -623,7 +623,7 @@ footer {
       font-size: 1.4em; } }
 
 /* historia */
-.history, .authorities {
+.history, .authorities, .postulations {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -737,3 +737,101 @@ footer {
     font-size: 2em; }
   .authorities__content h1 {
     font-size: 3.4em; } }
+
+/* postulaciones */
+.postulations__content {
+  display: flex;
+  flex-direction: column;
+  width: 86%;
+  height: auto; }
+  .postulations__content h1 {
+    font-size: 5em;
+    font-family: "Roboto", sans-serif;
+    color: #0056ff; }
+  .postulations__content__search {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 320px;
+    border: 1px solid #eeeeee;
+    border-radius: 50px;
+    background-color: transparent;
+    margin: 30px 0 0 0; }
+    .postulations__content__search span {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 5px 8px; }
+      .postulations__content__search span svg {
+        color: #0056ff; }
+    .postulations__content__search form {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .postulations__content__search form input {
+        width: 270px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        padding: 5px 0px 5px 0px;
+        font-family: inherit;
+        color: #151515; }
+  .postulations__content__jobs {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 35px 0 0 0;
+    width: 100%;
+    height: auto; }
+    .postulations__content__jobs__card {
+      display: flex;
+      flex-direction: column;
+      width: 210px;
+      padding: 15px;
+      background-color: #e8f5ff;
+      border-top: 2px solid #0056ff;
+      border-radius: 2px;
+      transition: 0.2s ease-in-out; }
+      .postulations__content__jobs__card:hover {
+        box-shadow: 1px 1px 5px rgba(53, 53, 53, 0.1); }
+      .postulations__content__jobs__card__modality {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.2em; }
+      .postulations__content__jobs__card h3 {
+        margin: 15px 0 0 0;
+        font-size: 1.6em;
+        font-weight: 400;
+        color: #151515; }
+      .postulations__content__jobs__card__bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        margin: 25px 0 0 0; }
+        .postulations__content__jobs__card__bottom p {
+          margin: 0 0 1px 0;
+          color: #b9b9b9; }
+        .postulations__content__jobs__card__bottom a {
+          padding: 5px 12px;
+          font-size: 1.2em;
+          font-weight: 400;
+          border-radius: 50px;
+          color: #ffffff;
+          background-color: #0056ff;
+          transition: 0.2s ease-in-out; }
+          .postulations__content__jobs__card__bottom a:hover {
+            background-color: #151515; }
+
+/* media queries */
+@media (max-width: 576px) {
+  .postulations__content h1 {
+    font-size: 3.4em; } }
+
+@media (max-width: 512px) {
+  .postulations__content__jobs__card {
+    width: 100%; } }

@@ -16,3 +16,13 @@
     border-radius: $radius;
     background-color: $background;
 }
+
+@mixin btnA($padding, $font-size, $font-weight, $border-radius, $color, $background, $transition) {
+    padding: $padding;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    border-radius: $border-radius;
+    color: $color;
+    background-color: $background;
+    transition: $transition;
+}
