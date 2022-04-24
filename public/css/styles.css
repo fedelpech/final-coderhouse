@@ -477,7 +477,7 @@ footer {
 
 /* finish */
 /* universidad */
-.breadcrumb, .university {
+.breadcrumb, .university, .careers {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -499,18 +499,18 @@ footer {
     .breadcrumb__content a {
       color: #151515; }
 
-.university__content {
+.university__content, .careers__content {
   display: flex;
   flex-direction: column;
   margin: 40px 0 0 0;
   width: 86%;
   min-height: 53vh; }
-  .university__content h1 {
+  .university__content h1, .careers__content h1 {
     margin: 0 0 20px;
     font-size: 5em;
     font-family: "Roboto", sans-serif;
     color: #0056ff; }
-  .university__content__section {
+  .university__content__section, .careers__content__section {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -522,15 +522,15 @@ footer {
     font-weight: 400;
     border-radius: 4px;
     transition: 0.2s ease-in-out; }
-    .university__content__section:hover {
+    .university__content__section:hover, .careers__content__section:hover {
       background-color: #eeeeee; }
-    .university__content__section svg {
+    .university__content__section svg, .careers__content__section svg {
       color: #0056ff; }
 
 /* finish */
 /* media queries */
 @media (max-width: 576px) {
-  .university .university__content h1 {
+  .university .university__content h1, .careers .university__content h1, .university .careers__content h1, .careers .careers__content h1 {
     font-size: 3.4em; } }
 
 /* somos */
@@ -835,3 +835,7 @@ footer {
 @media (max-width: 512px) {
   .postulations__content__jobs__card {
     width: 100%; } }
+
+/* carreras */
+.careers__content__section {
+  width: 245px; }

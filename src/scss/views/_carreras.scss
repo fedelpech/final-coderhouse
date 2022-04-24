@@ -1,0 +1,12 @@
+/* carreras */
+
+.careers {
+    @extend .university;
+    &__content {
+        @extend .university__content;
+        &__section {
+            @extend .university__content__section;
+            width: 245px;
+        }
+    }
+}
