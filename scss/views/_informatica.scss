@@ -1,22 +1,22 @@
-/* abogacia */
+/* economia */
 
 /* background */
 
-.red {
-    background-color: $bgRed;
+.orange {
+    background-color: $bgOrange;
 }
 
 /* header */
 
-.header__red {
+.header__orange {
     @extend header;
-    border-bottom: 1px solid $borderRed;
+    border-bottom: 1px solid $lightOrange;
 }
 
-.nav-bar__login__red {
+.nav-bar__login__orange {
     @include flex(row, center, center, null, null);
     a {
-        @include btnA(7px 16px, map-get($sizes, xs), map-get($weights, sm), 50px, $white, $red, 0.2s ease-in-out);
+        @include btnA(7px 16px, map-get($sizes, xs), map-get($weights, sm), 50px, $white, $orange, 0.2s ease-in-out);
         &:hover {
             background-color: $secondaryBlack;
         }
@@ -25,7 +25,7 @@
 
 /* main */
 
-.advocacy {
+.computing {
     @extend .postulations;
     &__content {
         @extend .postulations__content;
@@ -34,7 +34,7 @@
         }
         h1 {
             margin: 2px 0 0 25px;
-            color: $red;
+            color: $orange;
         }
         &__profile {
             @include flex(column, null, null, null, null);
@@ -44,7 +44,7 @@
                 @include flex(row, null, center, null, null);
                 margin: 0 0 20px 0;
                 padding: 0 0 0 15px;
-                border-left: 3px solid $red;
+                border-left: 3px solid $orange;
                 h3 {
                     font-size: map-get($sizes, md);
                 }
@@ -61,7 +61,7 @@
                     font-size: map-get($sizes, md);
                     transition: 0.2s ease-in-out;
                     &:hover svg {
-                        color: $red;
+                        color: $orange;
                     }
                 }
             }
@@ -69,6 +69,9 @@
         &__differential {
             @extend .advocacy__content__profile;
             width: auto;
+            span {
+                border-left: 3px solid $orange;
+            }
             &__wrapper {
                 @include flex(row, null, null, 1.5rem, wrap);
                 margin: 15px 0 0 0;
@@ -76,7 +79,7 @@
                     @include flex(column, null, null, null, null);
                     width: 320px;
                     padding: 15px 15px 10px 15px;
-                    border: 1px solid $red;
+                    border: 1px solid $orange;
                     border-radius: 2px;
                     transition: 0.2s ease-in-out;
                     &:hover {
@@ -93,12 +96,18 @@
         &__join {
             @extend .advocacy__content__profile;
             width: 100%;
+            span {
+                border-left: 3px solid $orange;
+            }
             &__steps {
                 @include flex(column, null, null, null, null);
                 width: 60%;
                 padding: 20px;
-                background-color: $lightRed;
-                border-top: 2px solid $red;
+                background-color: $lightOrange;
+                border-top: 2px solid $orange;
+                span {
+                    border-left: 2px solid $pink;
+                }
                 p {
                     margin: 0 0 10px 0;
                 }
@@ -124,16 +133,16 @@
 /* media queries */
 
 @media (max-width: 992px) {
-    .advocacy__content__profile {
+    .computing__content__profile {
         width: 100%;
     }
-    .advocacy__content__join .advocacy__content__join__steps {
+    .computing__content__join .computing__content__join__steps {
         width: 100%;
     }
 }
 
 @media (max-width: 576px) {
-    .advocacy__content h2 {
+    .computing__content h2 {
         font-size: map-get($sizes, md);
     }
 }
