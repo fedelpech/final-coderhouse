@@ -99,7 +99,7 @@ input {
 /* partials */
 /* header */
 /* here starts the header for desktop */
-header, .header-responsive {
+header, .header-responsive, .header__red {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -107,7 +107,7 @@ header, .header-responsive {
   height: auto;
   background-color: #ffffff;
   border-bottom: 1px solid #e8f5ff; }
-  header .nav-bar, .header-responsive .nav-bar {
+  header .nav-bar, .header-responsive .nav-bar, .header__red .nav-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -115,30 +115,30 @@ header, .header-responsive {
     width: 86%;
     height: 86px;
     background-color: #ffffff; }
-    header .nav-bar picture img, .header-responsive .nav-bar picture img {
+    header .nav-bar picture img, .header-responsive .nav-bar picture img, .header__red .nav-bar picture img {
       height: 64px; }
-    header .nav-bar__list, .header-responsive .nav-bar__list {
+    header .nav-bar__list, .header-responsive .nav-bar__list, .header__red .nav-bar__list {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       gap: 1.6rem;
       margin: 7px 0; }
-      header .nav-bar__list-item, .header-responsive .nav-bar__list-item {
+      header .nav-bar__list-item, .header-responsive .nav-bar__list-item, .header__red .nav-bar__list-item {
         height: auto; }
-        header .nav-bar__list-item:hover .uni, .header-responsive .nav-bar__list-item:hover .uni {
+        header .nav-bar__list-item:hover .uni, .header-responsive .nav-bar__list-item:hover .uni, .header__red .nav-bar__list-item:hover .uni {
           display: block; }
-        header .nav-bar__list-item:hover .careers, .header-responsive .nav-bar__list-item:hover .careers {
+        header .nav-bar__list-item:hover .careers, .header-responsive .nav-bar__list-item:hover .careers, .header__red .nav-bar__list-item:hover .careers {
           display: block; }
-        header .nav-bar__list-item__link, .header-responsive .nav-bar__list-item__link, .header-responsive .nav-bar__responsive-list__item {
+        header .nav-bar__list-item__link, .header-responsive .nav-bar__list-item__link, .header__red .nav-bar__list-item__link, .header-responsive .nav-bar__responsive-list__item {
           padding: 9px 12px;
           font-size: 1.4em;
           font-weight: 400;
           border-radius: 4px;
           transition: 0.2s ease-in-out; }
-          header .nav-bar__list-item__link:hover, .header-responsive .nav-bar__list-item__link:hover, .header-responsive .nav-bar__responsive-list__item:hover {
+          header .nav-bar__list-item__link:hover, .header-responsive .nav-bar__list-item__link:hover, .header__red .nav-bar__list-item__link:hover, .header-responsive .nav-bar__responsive-list__item:hover {
             background-color: #f7f7f7; }
-        header .nav-bar__list-item .sub-menu, .header-responsive .nav-bar__list-item .sub-menu {
+        header .nav-bar__list-item .sub-menu, .header-responsive .nav-bar__list-item .sub-menu, .header__red .nav-bar__list-item .sub-menu {
           position: absolute;
           display: none;
           margin: 10px 0 0 0;
@@ -146,15 +146,15 @@ header, .header-responsive {
           background-color: #ffffff;
           border: 1px solid #f7f7f7;
           border-radius: 4px; }
-          header .nav-bar__list-item .sub-menu::before, .header-responsive .nav-bar__list-item .sub-menu::before {
+          header .nav-bar__list-item .sub-menu::before, .header-responsive .nav-bar__list-item .sub-menu::before, .header__red .nav-bar__list-item .sub-menu::before {
             position: absolute;
             content: "";
             height: 10px;
             width: 102px;
             top: -11px; }
-          header .nav-bar__list-item .sub-menu__item, .header-responsive .nav-bar__list-item .sub-menu__item {
+          header .nav-bar__list-item .sub-menu__item, .header-responsive .nav-bar__list-item .sub-menu__item, .header__red .nav-bar__list-item .sub-menu__item {
             height: auto; }
-            header .nav-bar__list-item .sub-menu__item-link, .header-responsive .nav-bar__list-item .sub-menu__item-link {
+            header .nav-bar__list-item .sub-menu__item-link, .header-responsive .nav-bar__list-item .sub-menu__item-link, .header__red .nav-bar__list-item .sub-menu__item-link {
               display: flex;
               flex-direction: row;
               align-items: center;
@@ -165,16 +165,16 @@ header, .header-responsive {
               font-weight: 400;
               border-radius: 4px;
               transition: 0.2s ease-in-out; }
-              header .nav-bar__list-item .sub-menu__item-link:hover, .header-responsive .nav-bar__list-item .sub-menu__item-link:hover {
+              header .nav-bar__list-item .sub-menu__item-link:hover, .header-responsive .nav-bar__list-item .sub-menu__item-link:hover, .header__red .nav-bar__list-item .sub-menu__item-link:hover {
                 background-color: #f7f7f7; }
-              header .nav-bar__list-item .sub-menu__item-link svg, .header-responsive .nav-bar__list-item .sub-menu__item-link svg {
+              header .nav-bar__list-item .sub-menu__item-link svg, .header-responsive .nav-bar__list-item .sub-menu__item-link svg, .header__red .nav-bar__list-item .sub-menu__item-link svg {
                 color: #0056ff; }
-    header .nav-bar__login, .header-responsive .nav-bar__login {
+    header .nav-bar__login, .header-responsive .nav-bar__login, .header__red .nav-bar__login {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center; }
-      header .nav-bar__login a, .header-responsive .nav-bar__login a {
+      header .nav-bar__login a, .header-responsive .nav-bar__login a, .header__red .nav-bar__login a {
         padding: 7px 16px;
         font-size: 1.2em;
         font-weight: 400;
@@ -182,7 +182,7 @@ header, .header-responsive {
         color: #ffffff;
         background-color: #0056ff;
         transition: 0.2s ease-in-out; }
-        header .nav-bar__login a:hover, .header-responsive .nav-bar__login a:hover {
+        header .nav-bar__login a:hover, .header-responsive .nav-bar__login a:hover, .header__red .nav-bar__login a:hover {
           background-color: #151515; }
 
 /* here ends the header for desktop */
@@ -623,7 +623,7 @@ footer {
       font-size: 1.4em; } }
 
 /* historia */
-.history, .authorities, .postulations {
+.history, .authorities, .postulations, .advocacy {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -739,12 +739,12 @@ footer {
     font-size: 3.4em; } }
 
 /* postulaciones */
-.postulations__content {
+.postulations__content, .advocacy__content {
   display: flex;
   flex-direction: column;
   width: 86%;
   height: auto; }
-  .postulations__content h1 {
+  .postulations__content h1, .advocacy__content h1 {
     font-size: 5em;
     font-family: "Roboto", sans-serif;
     color: #0056ff; }
@@ -777,18 +777,21 @@ footer {
         padding: 5px 0px 5px 0px;
         font-family: inherit;
         color: #151515; }
+  .postulations__content h2, .advocacy__content h2 {
+    margin: 30px 0 0 0;
+    font-size: 1.6em; }
   .postulations__content__jobs {
     display: flex;
     flex-direction: row;
     gap: 20px;
     flex-wrap: wrap;
-    margin: 35px 0 0 0;
+    margin: 15px 0 0 0;
     width: 100%;
     height: auto; }
     .postulations__content__jobs__card {
       display: flex;
       flex-direction: column;
-      width: 210px;
+      width: 215px;
       padding: 15px;
       background-color: #e8f5ff;
       border-top: 2px solid #0056ff;
@@ -800,7 +803,7 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.3rem;
         font-size: 1.2em; }
       .postulations__content__jobs__card h3 {
         margin: 15px 0 0 0;
@@ -829,7 +832,7 @@ footer {
 
 /* media queries */
 @media (max-width: 576px) {
-  .postulations__content h1 {
+  .postulations__content h1, .advocacy__content h1 {
     font-size: 3.4em; } }
 
 @media (max-width: 512px) {
@@ -838,4 +841,152 @@ footer {
 
 /* carreras */
 .careers__content__section {
-  width: 245px; }
+  width: 220px; }
+
+/* historia */
+.history, .authorities, .postulations, .advocacy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 40px 0 0 0;
+  grid-column: 1 / 4;
+  height: auto; }
+  .history__content {
+    display: flex;
+    flex-direction: column;
+    width: 86%;
+    height: auto; }
+    .history__content::before {
+      content: "";
+      position: absolute;
+      margin: 100px 0 0 20px;
+      height: 2440px;
+      width: 2px;
+      background-color: #0056ff; }
+    .history__content h1 {
+      margin: 0 0 25px 0;
+      font-size: 5em;
+      font-family: "Roboto", sans-serif;
+      color: #0056ff; }
+    .history__content__wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      margin: 0 0 25px 0;
+      width: 100%;
+      height: auto; }
+      .history__content__wrapper__year {
+        position: relative;
+        z-index: 1; }
+        .history__content__wrapper__year p {
+          padding: 3px;
+          font-size: 1.6em;
+          font-weight: 500;
+          color: #151515;
+          background-color: #f4f9fd; }
+      .history__content__wrapper__desc {
+        margin: 1px 0 0 0;
+        width: 50%; }
+        .history__content__wrapper__desc p {
+          margin: 0 0 10px 0;
+          font-size: 1.4em; }
+
+/* finish */
+/* media queries */
+@media (max-width: 1280px) {
+  .history__content::before {
+    display: none; }
+  .history__content__wrapper__year p {
+    color: #0056ff; } }
+
+@media (max-width: 992px) {
+  .history__content__wrapper__desc {
+    width: 100%; } }
+
+@media (max-width: 576px) {
+  .history__content h1 {
+    font-size: 3.4em; } }
+
+/* abogacia */
+/* background */
+.red {
+  background-color: #fcf0f0; }
+
+/* header */
+.header__red {
+  border-bottom: 1px solid #ffebeb; }
+
+.nav-bar__login__red {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .nav-bar__login__red a {
+    padding: 7px 16px;
+    font-size: 1.2em;
+    font-weight: 400;
+    border-radius: 50px;
+    color: #ffffff;
+    background-color: #e72a2a;
+    transition: 0.2s ease-in-out; }
+    .nav-bar__login__red a:hover {
+      background-color: #151515; }
+
+/* main */
+.advocacy__content h2 {
+  font-size: 1.8em; }
+
+.advocacy__content h1 {
+  margin: 2px 0 0 25px;
+  color: #e72a2a; }
+
+.advocacy__content__profile, .advocacy__content__differential, .advocacy__content__join {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 40px 0 0 0; }
+  .advocacy__content__profile span, .advocacy__content__differential span, .advocacy__content__join span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 20px 0;
+    padding: 0 0 0 15px;
+    border-left: 3px solid #e72a2a; }
+    .advocacy__content__profile span h3, .advocacy__content__differential span h3, .advocacy__content__join span h3 {
+      font-size: 1.6em; }
+  .advocacy__content__profile p, .advocacy__content__differential p, .advocacy__content__join p {
+    margin: 0 0 10px 0;
+    font-size: 1.4em; }
+  .advocacy__content__profile__options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: 25px 0 0 0; }
+    .advocacy__content__profile__options a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.6em; }
+
+.advocacy__content__differential {
+  width: auto; }
+  .advocacy__content__differential__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 15px 0 0 0; }
+    .advocacy__content__differential__wrapper__card {
+      display: flex;
+      flex-direction: column;
+      width: 320px;
+      padding: 15px 15px 10px 15px;
+      border: 1px solid #e72a2a;
+      border-radius: 2px; }
+      .advocacy__content__differential__wrapper__card h4 {
+        margin: 0 0 10px 0;
+        font-size: 1.4em;
+        font-weight: 500; }

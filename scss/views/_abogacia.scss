@@ -1,0 +1,89 @@
+/* abogacia */
+
+/* background */
+
+.red {
+    background-color: $lightRed;
+}
+
+/* header */
+
+.header__red {
+    @extend header;
+    border-bottom: 1px solid $borderRed;
+}
+
+.nav-bar__login__red {
+    @include flex(row, center, center, null, null);
+    a {
+        @include btnA(7px 16px, map-get($sizes, xs), map-get($weights, sm), 50px, $white, $red, 0.2s ease-in-out);
+        &:hover {
+            background-color: $secondaryBlack;
+        }
+    }
+}
+
+/* main */
+
+.advocacy {
+    @extend .postulations;
+    &__content {
+        @extend .postulations__content;
+        h2 {
+            font-size: map-get($sizes, xl);
+        }
+        h1 {
+            margin: 2px 0 0 25px;
+            color: $red;
+        }
+        &__profile {
+            @include flex(column, null, null, null, null);
+            width: 60%;
+            margin: 40px 0 0 0;
+            span {
+                @include flex(row, null, center, null, null);
+                margin: 0 0 20px 0;
+                padding: 0 0 0 15px;
+                border-left: 3px solid $red;
+                h3 {
+                    font-size: map-get($sizes, md);
+                }
+            }
+            p {
+                margin: 0 0 10px 0;
+                font-size: map-get($sizes, sm);
+            }
+            &__options {
+                @include flex(row, null, center, 3rem, wrap);
+                margin: 25px 0 0 0;
+                a {
+                    @include flex(row, null, center, 0.5rem, null);
+                    font-size: map-get($sizes, md);
+                }
+            }
+        }
+        &__differential {
+            @extend .advocacy__content__profile;
+            width: auto;
+            &__wrapper {
+                @include flex(row, null, null, 1.5rem, wrap);
+                margin: 15px 0 0 0;
+                &__card {
+                    @include flex(column, null, null, null, null);
+                    width: 320px;
+                    padding: 15px 15px 10px 15px;
+                    border: 1px solid $red;
+                    border-radius: 2px;
+                    h4 {
+                        margin: 0 0 10px 0;
+                        font-size: map-get($sizes, sm);
+                        font-weight: map-get($weights, md);
+                    }
+                }
+            }
+        }
+        &__join {
+            @extend .advocacy__content__profile;
+        }
+    }
+}
