@@ -1,0 +1,93 @@
+/* becas */
+
+.scholarship {
+    @extend .postulations;
+    &__content {
+        @extend .postulations__content;
+        p {
+            font-size: map-get($sizes, sm);
+            margin: 0 0 5px;
+        }
+        a {
+            color: $blue;
+            transition: 0.2s ease-in-out;
+            &:hover {
+                color: $secondaryBlack;
+                text-decoration: underline;
+            }
+        }
+        &__desc {
+            margin: 25px 0 0 0;
+            width: 55%;
+            p {
+                margin: 5px 0 0 0;
+                font-size: map-get($sizes, sm);
+            }
+        }
+        h2 {
+            font-size: map-get($sizes, md);
+            font-weight: map-get($weights, md);
+            margin: 25px 0;
+        }
+        &__wrapper {
+            @include flex(row, null, null, 2.2rem, wrap);
+            height: auto;
+            &__card {
+                @include flex(column, null, null, 1rem, null);
+                width: 320px;
+                p {
+                    font-size: map-get($sizes, sm);
+                }
+                &__title {
+                    @include flex(row, null, center, 0.5rem, null);
+                    svg {
+                        color: $orange;
+                    }
+                    .scholarship__green {
+                        color: $darkGreen;
+                    }
+                    .scholarship__blue {
+                        color: $blue;
+                    }
+                    .scholarship__sky-blue {
+                        color: $skyBlue;
+                    }
+                    .scholarship__pink {
+                        color: $pink;
+                    }
+                    p {
+                        font-size: map-get($sizes, sm);
+                        font-weight: map-get($weights, md);
+                        span {
+                            color: $orange;
+                        }
+                        .scholarship__green {
+                            color: $darkGreen;
+                        }
+                        .scholarship__blue {
+                            color: $blue;
+                        }
+                        .scholarship__sky-blue {
+                            color: $skyBlue;
+                        }
+                        .scholarship__pink {
+                            color: $pink;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+
+/* finish */
+
+/* media queries */
+
+@media (max-width: 992px) {
+    .scholarship__content__desc {
+        width: 100%;
+    }
+}
+
+

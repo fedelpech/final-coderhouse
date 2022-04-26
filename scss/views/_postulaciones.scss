@@ -22,9 +22,9 @@
                     color: $blue;
                 }
             }
-            form {
+            &__form {
                 @include flex(row, null, center, null, null);
-                input {
+                &__input {
                     @include btn(null, 270px, none, null, transparent);
                     outline: none;
                     padding: 5px 0px 5px 0px;
